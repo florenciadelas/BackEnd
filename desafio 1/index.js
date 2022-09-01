@@ -7,8 +7,8 @@ class Usuario {
     }
 
     countMascotas() {
-        if (libros.lenght > 0) {
-           return this.libros.lenght
+        if (this.mascotas.lenght > 0) {
+           return this.mascotas.lenght
         } else {
             return `No posee libros`
         }
