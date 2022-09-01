@@ -8,7 +8,9 @@ res.send("hola Flor")
 })
 
 app.get('/productos', async (req,res)=>{
-    res.send(await contenedor.getAll())
+    const data = await contenedor.getAll()
+    console.log(data)
+    res.send(data)
     })
 
 app.get('/productosRandom', async (req, res) => {
