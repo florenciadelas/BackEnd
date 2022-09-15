@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{#if compras}}
+      <table>
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre del producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each compras}}
+              <th scope="row">{{this.id}}</th>
+              <td>{{this.title}}</td>
+              <td>{{this.price}}</td>
+              <td><img
+                  rel="icon"
+                  src="{{this.foto}}"
+                  style="width: 30px; height: 30px;"
+                /></td>
+          {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      <h1> {{noProd}}</h1>
+    {{/if}}
+    <div>
+
+</body>
+</html>

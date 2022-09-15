@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        if compras.length > 0
+        table
+          thead
+            tr
+              th(scope='col') #
+              th(scope='col') Nombre del producto
+              th(scope='col') Precio
+              th(scope='col') Foto
+          tbody
+              each val in compras
+                 tr
+                  th(scope='row')= val.id
+                  td= val.title
+                  td= val.price
+                  td
+                    img(rel='icon', src=val.foto)
+        button.btn.btn-primary.d-grid.gap-2.col-6.mx-auto(onclick="window.location.href='/'") Volver a cargar productos
+    else 
+        h1= noProd
+        
+        button(onclick="window.location.href='/'") Volver a cargar productos
