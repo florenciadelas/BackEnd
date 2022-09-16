@@ -1,1 +1,56 @@
-[{"nombre":"remera","precio":100,"url":"https://sp.depositphotos.com/stock-photos/gatito.html","id":1},{"nombre":"remera","precio":100,"url":"https://sp.depositphotos.com/stock-photos/gatito.html","id":2},{"nombre":"remera","precio":100,"url":"https://sp.depositphotos.com/stock-photos/gatito.html","id":3}]
+[
+  {
+    "nombre": "remera",
+    "precio": 100,
+    "url": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 1
+  },
+  {
+    "nombre": "remera",
+    "precio": 100,
+    "url": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 2
+  },
+  {
+    "nombre": "remera",
+    "precio": 100,
+    "url": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 3
+  },
+  {
+    "title": "remera",
+    "price": "10",
+    "foto": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 4
+  },
+  {
+    "title": "felipe",
+    "price": "2000",
+    "foto": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 5
+  },
+  {
+    "title": "florr",
+    "price": "150",
+    "foto": "https://sp.depositphotos.com/stock-photos/gatito.html",
+    "id": 6
+  },
+  {
+    "title": "",
+    "price": "",
+    "foto": "",
+    "id": 7
+  },
+  {
+    "title": "",
+    "price": "",
+    "foto": "",
+    "id": 8
+  },
+  {
+    "title": "",
+    "price": "",
+    "foto": "",
+    "id": 9
+  }
+]

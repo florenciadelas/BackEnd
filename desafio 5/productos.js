@@ -4,9 +4,9 @@ const router = Router();
 const Contenedor = require("./contenedor");
 const constructor = new Contenedor("./productos.json");
 
-router.get("/", (req, res) => {
+router.get("/productos", (req, res) => {
   try {
-    res.send(constructor.getAll());
+    res.render("productos", constructor.getAll());
   } catch (err) {
     res.status(404).send(err);
   }
@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   try {
     const { id } = req.params;
-    res.send(constructor.getById(parseInt(id)));
+    res.render(constructor.getById(parseInt(id)));
   } catch (err) {
     res.status(404).send(err);
   }

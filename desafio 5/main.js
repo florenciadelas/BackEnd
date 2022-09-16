@@ -20,7 +20,7 @@ app.engine(
     handlebars.engine({
         extname: "hbs",
         layoutsDir: __dirname + "/views",
-        defaultLayout: "main",
+        defaultLayout: "root",
     })
 );
 
@@ -37,17 +37,17 @@ app.engine(
 app.get("/", (req, res) => {
     res.render("root", {
       layout: "root",
-      title: "Página principal",
-      Precio: "Precio",
+      nombre: "Página principal",
+      precio: "Precio",
       addProd: "Añadir Producto",
     });
   });
 
-  app.get("/productos", (req, res) => {
+  app.get("/productos", async (req, res) => {
     res.render("productos", {
       layout: "productos",
-      title: "Productos",
-      compras: constructor.getAll(),
+      nombre: "Productos",
+      compras: await constructor.getAll(),
       noProd: "No hay productos",
     });
   });
@@ -57,7 +57,7 @@ app.get("/", (req, res) => {
   // app.get("/", (req, res) => {
   //   res.render("root", {
   //     layout: "root",
-  //     title: "Página principal",
+  //     nombre: "Página principal",
   //     Precio: "Precio",
   //     addProd: "Añadir Producto",
   //   });
@@ -66,7 +66,7 @@ app.get("/", (req, res) => {
   // app.get("/productos", (req, res) => {
   //   res.render("productos", {
   //     layout: "productos",
-  //     title: "Productos",
+  //     nombre: "Productos",
   //     compras: constructor.getAll().sort((a, b) => a.id - b.id),
   //     noProd: "No hay productos",
   //   });
@@ -78,7 +78,7 @@ app.get("/", (req, res) => {
   // app.get("/", (req, res) => {
   //   res.render("root", {
   //     layout: "root",
-  //     title: "Página principal",
+  //     nombre: "Página principal",
   //     Precio: "Precio",
   //     addProd: "Añadir Producto",
   //   });
@@ -87,7 +87,7 @@ app.get("/", (req, res) => {
   // app.get("/productos", (req, res) => {
   //   res.render("productos", {
   //     layout: "productos",
-  //     title: "Productos",
+  //     nombre: "Productos",
   //     compras: constructor.getAll().sort((a, b) => a.id - b.id),
   //     noProd: "No hay productos",
   //   });
@@ -95,7 +95,7 @@ app.get("/", (req, res) => {
   
 
 const server = app.listen(8080, () => {
-    console.log(`Servidor desafio 4`);
+    console.log(`Servidor desafio 5`);
   });
 
   
