@@ -13,18 +13,17 @@ app.use("/", express.static(__dirname + "/public"));
 
 app.get("/api/productos", async (req, res) => {
   try {
-    res.send(contenedor.getAll());
-  } catch {
-    res.status(200).json(data);
+    const data = await contenedor.getAll();
+    res.json(data)
+  } catch (err){
+    res.status(404).send(err);
   }
 });
 
 app.get("/api/productos/:id", async (req, res) => {
   try {
-    const {
-      id
-    } = req.params;
-    res.send(contenedor.getById(parseInt(id)));
+    const {id} = req.params;
+    res.json(await contenedor.getById(parseInt(id)));
   } catch (err) {
     res.status(404).send(err);
   }

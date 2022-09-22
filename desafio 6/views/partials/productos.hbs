@@ -1,0 +1,17 @@
+<div>
+  {{#if compras}}
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre del producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody id="lista-productos"></tbody>
+  </table>
+  {{else}}
+  <h1> {{noProd}}</h1>
+  {{/if}}
+</div>
